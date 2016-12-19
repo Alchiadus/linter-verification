@@ -1,0 +1,18 @@
+/* Reference: https://github.com/atom/one-dark-ui/blob/master/styles/ui-variables.less */
+@import "ui-variables";
+
+atom-text-editor::shadow .linter-highlight, .linter-highlight,
+atom-text-editor .linter-highlight, .linter-highlight {
+  &.success {
+    &:not(.line-number) {
+      background-color: @background-color-success;
+      color: white;
+    }
+  }
+  &.pending {
+    &:not(.line-number) {
+      background-color: @background-color-info;
+      color: white;
+    }
+  }
+}

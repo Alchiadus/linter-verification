@@ -1,0 +1,135 @@
+{
+  "name": "linter-verification",
+  "main": "./lib/main",
+  "version": "0.0.0",
+  "description": "A linter for the verification tools Dafny, Chalice and Boogie.",
+  "keywords": [
+    "linter",
+    "verification",
+    "dafny",
+    "chalice",
+    "boogie"
+  ],
+  "repository": "https://github.com/alchiadus/linter-verification",
+  "license": "MIT",
+  "engines": {
+    "atom": "^1.0.0"
+  },
+  "activationHooks": [
+    "language-dafny:grammar-used",
+    "language-chalice:grammar-used",
+    "language-boogie:grammar-used"
+  ],
+  "consumedServices": {
+    "linter-indie": {
+      "versions": {
+        "1.0.0": "consumeLinter"
+      }
+    }
+  },
+  "configSchema": {
+    "executableSettings": {
+      "order": 1,
+      "title": "Executable Settings",
+      "type": "object",
+      "properties": {
+        "dafnyExecutablePath": {
+          "order": 1,
+          "title": "Dafny Executable Path",
+          "description": "The location of the Dafny binary. By default it is resolved from your path.",
+          "type": "string",
+          "default": "dafny"
+        },
+        "dafnyExecutableArguments": {
+          "order": 2,
+          "title": "Dafny Executable Arguments",
+          "description": "Comma separated list of options to pass to the Dafny binary. Execute `dafny /help` in your terminal to see which options are allowed.",
+          "type": "array",
+          "default": [
+            "/nologo",
+            "/compile:0"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "chaliceExecutablePath": {
+          "order": 3,
+          "title": "Chalice Executable Path",
+          "description": "The location of the Chalice binary. By default it is resolved from your path.",
+          "type": "string",
+          "default": "chalice"
+        },
+        "chaliceExecutableArguments": {
+          "order": 4,
+          "title": "Chalice Executable Arguments",
+          "description": "Comma separated list of options to pass to the Chalice binary. Execute `chalice /help` in your terminal to see which options are allowed.",
+          "type": "array",
+          "default": [
+            "/nologo"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "boogieExecutablePath": {
+          "order": 5,
+          "title": "Boogie Executable Path",
+          "description": "The location of the Boogie binary. By default it is resolved from your path.",
+          "type": "string",
+          "default": "boogie"
+        },
+        "boogieExecutableArguments": {
+          "order": 6,
+          "title": "Boogie Executable Arguments",
+          "description": "Comma separated list of options to pass to the Boogie binary. Execute `boogie /help` in your terminal to see which options are allowed.",
+          "type": "array",
+          "default": [
+            "/nologo"
+          ],
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "dependencies": {
+    "atom-linter": "^8.0.0",
+    "dafny-transpiler": "github:Alchiadus/dafny-transpiler#v0.1.0"
+  },
+  "devDependencies": {
+    "xo": "^0.17.0",
+    "babel-eslint": "^7.0.0"
+  },
+  "xo": {
+    "esnext": true,
+    "globals": [
+      "atom"
+    ],
+    "space": 2,
+    "parser": "babel-eslint",
+    "rules": {
+      "arrow-parens": [
+        "error",
+        "always"
+      ],
+      "comma-dangle": [
+        "error",
+        "always-multiline"
+      ],
+      "no-unused-expressions": [
+        "error",
+        {
+          "allowTernary": true
+        }
+      ],
+      "unicorn/catch-error-name": [
+        "error",
+        {
+          "name": "error"
+        }
+      ]
+    }
+  }
+}
