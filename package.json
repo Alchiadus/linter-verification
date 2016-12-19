@@ -2,7 +2,7 @@
   "name": "linter-verification",
   "main": "./lib/main",
   "version": "0.1.0",
-  "description": "A linter for the verification tools Dafny, Chalice and Boogie.",
+  "description": "Linter package with support for the program verification tools Dafny, Chalice and Boogie.",
   "keywords": [
     "linter",
     "verification",
