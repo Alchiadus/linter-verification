@@ -96,7 +96,7 @@
   },
   "dependencies": {
     "atom-linter": "^8.0.0",
-    "dafny-transpiler": "github:Alchiadus/dafny-transpiler#v0.1.0"
+    "dafny-transpiler": "github:Alchiadus/dafny-transpiler#v0.3.0"
   },
   "devDependencies": {
     "xo": "^0.17.0",
