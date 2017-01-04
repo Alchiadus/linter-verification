@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.4.0
+
+- Warnings are parsed and displayed.
+- For the tools that have a trustworthy exit code, i.e. Dafny, the exit code is used to determine successful verification.
+- The last line from the verification tool's output is always displayed.
+
 ## 0.3.0
 
 - Print error messages to Atom's console.error (View -> Developer -> Toggle Developer Tools).
