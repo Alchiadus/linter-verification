@@ -118,6 +118,7 @@
         "error",
         "always-multiline"
       ],
+      "no-negated-condition": "off",
       "no-unused-expressions": [
         "error",
         {
