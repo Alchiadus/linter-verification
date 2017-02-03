@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.5.0
+
+- Fixed deprecations for Atom `v1.13.0`.
+
 ## 0.4.0
 
 - Warnings are parsed and displayed.
