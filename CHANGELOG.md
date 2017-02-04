@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.5.1
+
+- Fixed an issue that prevented the `success` and `pending` status messages from being styled.
+
 ## 0.5.0
 
 - Fixed deprecations for Atom `v1.13.0`.
